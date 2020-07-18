@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node --harmony server.js"
+    "start": "node --harmony server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "koa": "^1.0.0",
@@ -14,6 +16,8 @@
     "koa-router": "^5.1.2",
     "passport": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
-    "password": "^0.1.1"
-  }
+    "password": "^0.1.1",
+    "snyk": "^1.362.1"
+  },
+  "snyk": true
 }
